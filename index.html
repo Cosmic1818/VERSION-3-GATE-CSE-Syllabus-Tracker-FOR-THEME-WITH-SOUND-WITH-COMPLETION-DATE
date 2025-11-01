@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE CSE Syllabus Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Background */
+        --bg-color-start: #0f0c29;
+        --bg-color-mid: #302b63;
+        --bg-color-end: #24243e;
+        
+        /* Accent Gradient */
+        --accent-gradient: linear-gradient(90deg, #00f2fe, #b43dff, #ff34a3);
+
+        /* Text */
+        --text-primary: #e2e8f0; /* slate-200 */
+        --text-secondary: #94a3b8; /* slate-400 */
+        --text-accent: #22d3ee; /* cyan-400 */
+        --text-on-accent: #ffffff;
+
+        /* Cards */
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --card-border: rgba(255, 255, 255, 0.1);
+        --card-hover-bg: rgba(255, 255, 255, 0.08);
+        --card-hover-border: rgba(0, 242, 254, 0.2);
+
+        /* Header */
+        --header-bg: rgba(0, 0, 0, 0.2);
+        --header-border: rgba(255, 255, 255, 0.1);
+        
+        /* Components */
+        --progress-track-bg: rgba(255, 255, 255, 0.1);
+        --checkbox-bg: rgba(255, 255, 255, 0.1);
+        --checkbox-border: rgba(255, 255, 255, 0.2);
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(-45deg, var(--bg-color-start), var(--bg-color-mid), var(--bg-color-end));
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        color: var(--text-primary);
+        transition: color 0.3s, background 0.3s;
+      }
+
+      @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      .glass-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--card-border);
+        border-radius: 1rem;
+        transition: background 0.3s, border-color 0.3s, transform 0.3s;
+      }
+
+      .glass-card:hover {
+        background: var(--card-hover-bg);
+        border-color: var(--card-hover-border);
+        transform: translateY(-5px);
+      }
+
+      .gradient-text {
+        background: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      
+      .progress-bar-gradient {
+        background: var(--accent-gradient);
+      }
+      
+      .fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
